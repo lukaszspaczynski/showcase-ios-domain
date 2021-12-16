@@ -41,7 +41,12 @@ let package = Package(
             name: "ShowcaseDomainMocks",
             dependencies: [
                 .target(name: "ShowcaseDomain"),
-                .product(name: "ShowcaseDataMocks", package: "ShowcaseData")
+                .product(name: "ShowcaseDataMocks", package: "ShowcaseData"),
+                .product(name: "RxSwift", package: "RxSwift"),
+                .product(name: "RxCocoa", package: "RxSwift"),
+                "ShowcaseExtensions",
+                "RxSwiftExt",
+                "Action"
             ]),
         .testTarget(
             name: "ShowcaseDomainTests",
